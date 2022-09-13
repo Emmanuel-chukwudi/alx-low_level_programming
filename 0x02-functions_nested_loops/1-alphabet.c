@@ -8,8 +8,6 @@
  */
 
 void print_alpahbet(void);
-
-int main(void)
 {
 	char q;
 
