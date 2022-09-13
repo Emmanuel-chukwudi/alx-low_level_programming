@@ -7,7 +7,7 @@
  * Return: Always 0 (Success)
  */
 
-void print_alpahbet(void);
+void print_alpahbet(void)
 {
 	char q;
 
