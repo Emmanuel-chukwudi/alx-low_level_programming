@@ -9,7 +9,7 @@
 
 void print_alpahbet(void)
 {
-	char q;
+	int q;
 
 	for (q = 'a'; q <= 'z'; q++)
 	{
