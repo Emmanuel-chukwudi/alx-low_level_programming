@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int c, boolean1, boolean2
+	int c, boolean1, boolean2;
 	long int num1, num2, a, q, num11, num22;
 
 	num1 = 1;
