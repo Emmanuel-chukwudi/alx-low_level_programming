@@ -8,7 +8,7 @@
 int main(void)
 {
 	int c, boolean1, boolean2
-	long int num1, num2, a, ab, num1a, num2a;
+	long int num1, num2, a, q, num11, num22;
 
 	num1 = 1;
 	num2 = 2;
@@ -27,23 +27,23 @@ int main(void)
 		{
 			if (boolean2)
 			{
-				num1a = num1 % 1000000000;
-				num2a = num2 % 1000000000;
+				num11 = num1 % 1000000000;
+				num22 = num2 % 1000000000;
 				num1 = num1 / 1000000000;
 				num2 = num2 / 1000000000;
 				boolean2 = 0;
 			}
-			ab = (num1a + num2a);
-			a =  num1 + num2 + (ab / 1000000000);
+			q = (num11 + num22);
+			a =  num1 + num2 + (q / 1000000000);
 			printf(", %ld", a);
-			printf("%ld", ab % 1000000000);
+			printf("%ld", q % 1000000000);
 			num1 = num2;
-			num1a = num2a;
+			num11 = num22;
 			num2 = a;
-			num2a = (ab % 1000000000);
+			num22 = (q % 1000000000);
 		}
 		if (((num1 + num2) < 0) && boolean1 == 1)
-			boolean = 0;
+			boolean1 = 0;
 	}
 	printf("\n");
 	return (0);
