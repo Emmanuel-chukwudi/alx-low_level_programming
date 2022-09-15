@@ -3,7 +3,7 @@
 /**
  * main - This function checks to see if an integer is positive or negative
  *
- * Returnn: Alway0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
