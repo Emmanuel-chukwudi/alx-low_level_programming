@@ -11,7 +11,7 @@ int main(void)
 	unsigned long num = 612852475143;
 	unsigned long divisor = 2;
 
-	while (divisor < 2)
+	while (divisor < num)
 	{
 		if (num % divisor == 0)
 		{
