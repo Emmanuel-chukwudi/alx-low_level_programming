@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - print character "\" n times
- * @number: number of characters to draw
+ * @n: number of characters to draw
  */
 void print_diagonal(int n)
 {
@@ -18,10 +18,10 @@ void print_diagonal(int n)
 				_putchar(' ');
 			}
 			_putchar('\\');
-			_putchar('n');
+			_putchar('\n');
 		}
 	}
-	else 
+	else
 	{
 		_putchar('\n');
 	}
