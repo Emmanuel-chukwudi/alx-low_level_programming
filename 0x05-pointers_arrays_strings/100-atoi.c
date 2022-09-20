@@ -1,43 +1,40 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 
 /**
- * main - Random password generator
- *
+ *  _atoi - converts string to an integer
+ * @s: a string
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int _atoi(char *s)
 {
-	int a, b, d, s;
-	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char p[58];
+	int a = 1;
+	unsigned int t = 0;
+	char null_flag = 0;
 
-	srand(time(NULL));
-	while (s != 2772)
+	while (*s)
 	{
-		a = d = s = 0;
-		while ((2772 - 122) > s)
+		if (*s == '-')
 		{
-			b = rand() % 62;
-			p[a] = c[b];
-			s += c[b];
-			a++;
+			a *= -1;
 		}
-		while (c[d])
+		if (*s >= '0' && *s <= '9')
 		{
-			if (c[d] == (2772 - s))
-			{
-				p[a] = c[d];
-				s += c[d];
-				a++;
-				break;
-			}
-			d++;
+			null_flag = 1;
+			t = t * 10 + *s - '0';
 		}
+
+		else if (null_flag)
+		{
+			break;
+		}
+		s++;
 	}
-	p[a] = '\0';
-	printf("%s", p);
-	return (0);
+
+	if (a < 0)
+	{
+		t = (-t);
+	}
+
+	return (t);
 }
