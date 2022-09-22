@@ -17,7 +17,7 @@ char *rot13(char *c)
 	for (b = 0; c[b] != '\0'; b++)
 	{
 		a = 0;
-		while ((p[a] != '\0') && (c[b] != p[a]))
+		while (p[a] != '\0' && c[b] != p[a])
 		{
 			a++;
 		}
