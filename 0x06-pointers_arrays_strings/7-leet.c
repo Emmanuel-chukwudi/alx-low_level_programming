@@ -8,22 +8,22 @@
 
 char *leet(char *c)
 {
-	int d[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int q[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	char d[] = "aAeEoOtTlL";
+	char q[] = "4433007711";
 
-	int f;
+	int f = 0;
 	int w;
 
-	for (w = 0; c[w] != '\0'; w++)
+	for (; c[f] != '\0'; f++)
 	{
-		for (f = 0; d[f] != '\0'; f++)
+		for (w = 0; w <= 9; w++)
 		{
-			if (c[w] == d[f])
+			if (d[w] == c[f])
 			{
-				c[f] = q[f];
+				c[f] = q[w];
 			}
 		}
 	}
-
 	return (c);
 }
+
