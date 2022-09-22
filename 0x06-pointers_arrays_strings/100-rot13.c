@@ -9,18 +9,18 @@
 char *rot13(char *c)
 {
 	char p[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char q[] = "nopqrstuvwxyzabcdefghijklmnopQRSTUVWXYZABCDEFGHIJKLM";
+	char q[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	int a = 0;
 	int b;
 
-	while (c[a] != '\0')
+	while (*(c + a) != '\0')
 	{
 		for (b = 0; b < 52; b++)
 		{
-			if (c[a] == p[b])
+			if (*(c + a) == p[b])
 			{
-				c[a] = q[b];
+				*(c + a) = q[b];
 				break;
 			}
 		}
