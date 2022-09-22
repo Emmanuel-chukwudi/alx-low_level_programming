@@ -11,22 +11,20 @@ char *rot13(char *c)
 	char p[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char q[] = "nopqrstuvwxyzabcdefghijklmnopQRSTUVWXYZABCDEFGHIJKLM";
 
-	int a;
+	int a = 0;
 	int b;
 
-	for (b = 0; c[b] != '\0'; b++)
+	while (c[a] != '\0')
 	{
-		a = 0;
-		while (p[a] != '\0' && c[b] != p[a])
+		for (b = 0; b < 52; b++)
 		{
-			a++;
+			if (c[a] == p[b])
+			{
+				c[a] = q[b];
+				break;
+			}
 		}
-
-		if (c[b] == p[a])
-		{
-			c[b] = q[a];
-		}
+		a++;
 	}
-
 	return (c);
 }
