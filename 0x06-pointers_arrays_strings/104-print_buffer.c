@@ -6,51 +6,51 @@
  *
  *  @b: buffer
  *
- *  @size: size
+ *  @size: size of buffer
  *
- *  Return: Always 0
+ *  Return: Always 0 (Success)
  */
 
 void print_buffer(char *b, int size)
 {
-	int a, c, d;
+	int o, j, i;
 
-	a = 0;
+	o = 0;
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-	while (a < size)
+	while (o < size)
 	{
-		c = size - a < 10 ? size - a : 10;
-		printf("%08x: ", a);
-		for (d = 0; d < 10; d++)
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			if (a < c)
+			if (i < j)
 			{
-				printf("%02x", *(b + a + d));
+				printf("%02x", *(b + o + i));
 			}
 			else
 			{
-				printf(" ");
+				printf("  ");
 			}
-			if (d % 2)
+			if (i % 2)
 			{
 				printf(" ");
 			}
 		}
-		for (d = 0; d < c; d++)
+		for (i = 0; i < j; i++)
 		{
-			int f = *(b + a + d);
+			int c = *(b + o + i);
 
-			if (f < 32 || f > 132)
+			if (c < 32 || c > 132)
 			{
-				f = '.';
+				c = '.';
 			}
-			printf("\n");
-			a += 10;
+			printf("%c", c);
 		}
+		printf("\n");
+		o += 10;
 	}
 }
-
