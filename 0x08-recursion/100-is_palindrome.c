@@ -37,7 +37,7 @@ int _strlen(char *s)
 }
 
 /**
- * _is_palindrome - check if it is an empty string
+ * is_palindrome - check if it is an empty string
  * @s: string
  * Return: 1 if empty, 0 if not
  */
