@@ -42,7 +42,7 @@ int _strlen(char *s)
  * Return: 1 if empty, 0 if not
  */
 
-int _is_palindrome(char *s)
+int is_palindrome(char *s)
 {
 	int length = _strlen(s);
 
