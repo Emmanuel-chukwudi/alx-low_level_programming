@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
 			if (argv[a][b] < '0' || argv[a][b] > '9')
 			{
 				printf("Error\n");
-				return(1);
+				return (1);
 			}
 		}
-		sum += atoi (argv[a]);
+		sum += atoi(argv[a]);
 	}
 	printf("%d\n", sum);
 	return (0);
