@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	unsigned int cnt = 0;
+	unsigned int count = 0;
 
 	if (argc != 2)
 	{
@@ -22,45 +22,45 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-	cnt = coin_cnt(cnt, atoi(argv[1]));
-	printf("%d\n", cnt);
+	count = coin_count(count, atoi(argv[1]));
+	printf("%d\n", count);
 	return (0);
 }
 
 /**
- * coin_cnt - This counts the minimum coins needed
- * @cnt: coins counter
+ * coin_count - This counts the minimum coins needed
+ * @count: coins counter
  * @num: argv[1] converted to integer
  * Return: integer
  */
-unsigned int coin_cnt(unsigned int cnt, int num)
+unsigned int coin_count(unsigned int count, int num)
 {
 	unsigned int sum = 0;
 
 	while (!(sum + 25 > (unsigned int)num))
 	{
 		sum += 25;
-		cnt++;
+		count++;
 	}
 	while (!(sum + 10 > (unsigned int)num))
 	{
 		sum += 10;
-		cnt++;
+		count++;
 	}
 	while (!(sum + 5 > (unsigned int)num))
 	{
 		sum += 5;
-		cnt++;
+		count++;
 	}
 	while (!(sum + 2 > (unsigned int)num))
 	{
 		sum += 2;
-		cnt++;
+		count++;
 	}
 	while (!(sum + 1 > (unsigned int)num))
 	{
 		sum += 1;
-		cnt++;
+		count++;
 	}
-	return (cnt); /* cnt is counter for coins */
+	return (count);
 }
