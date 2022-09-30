@@ -1,34 +1,8 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "main.h"
 /**
- * main - prints the min num of coins to make chnge for an amnt of money
- * @argc: argument count
- * @argv: argument vector, an array
- * Return: integer
- */
-int main(int argc, char *argv[])
-{
-	unsigned int count = 0;
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	else if (atoi(argv[1]) < 0)
-	{
-		printf("%d\n", 0);
-		return (0);
-	}
-	count = coin_count(count, atoi(argv[1]));
-	printf("%d\n", count);
-	return (0);
-}
-
-/**
- * coin_count - This counts the minimum coins needed
+ * coin_count - counts the coins needed
  * @count: coins counter
  * @num: argv[1] converted to integer
  * Return: integer
@@ -63,4 +37,29 @@ unsigned int coin_count(unsigned int count, int num)
 		count++;
 	}
 	return (count);
+}
+
+/**
+ * main - prints the min num of coins to make chnge for an amnt of money
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: integer
+ */
+int main(int argc, char *argv[])
+{
+	unsigned int count = 0;
+
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else if (atoi(argv[1]) < 0)
+	{
+		printf("%d\n", 0);
+		return (0);
+	}
+	count = coin_count(count, atoi(argv[1]));
+	printf("%d\n", count);
+	return (0);
 }
