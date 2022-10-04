@@ -7,31 +7,31 @@
  * @size: size of
  * @c: char
  * Return: NULL if size = 0
- */ 
-
+ */
 char *create_array(unsigned int size, char c)
 {
-	char *array, unsigned int a;
+	char *array;
+	unsigned int b;
 
-	a = 0;
+	b = 0;
 
 	if (size == 0)
 	{
-		return ('\0');
+		return (NULL);
 	}
 	else
 	{
 		array = malloc(sizeof(char) * size);
-		if (array == '\0')
+		if (array == NULL)
 		{
-			return ('\0');
+			return (NULL);
 		}
 		else
 		{
-			while (a < size)
+			while (b < size)
 			{
-				array[a] = c;
-				a++;
+				array[b] = c;
+				b++;
 			}
 		}
 		return (array);
