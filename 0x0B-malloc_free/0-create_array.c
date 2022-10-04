@@ -1,28 +1,39 @@
 #include "main.h"
-#define "NULL"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * create_array - creates an array if char
+ * create_array - creates an array of char
+ * @size: size of
  * @c: char
  * Return: NULL if size = 0
- */
+ */ 
 
 char *create_array(unsigned int size, char c)
 {
-	char *array;
+	char *array, unsigned int a;
 
-	if (!size)
+	a = 0;
+
+	if (size == 0)
 	{
-		return (NULL);
+		return ('\0');
 	}
-	array = (char *) malloc(sizeof(char) * size);
-
-	if (array)
+	else
 	{
-		while (size > 0)
+		array = malloc(sizeof(char) * size);
+		if (array == '\0')
+		{
+			return ('\0');
+		}
+		else
+		{
+			while (a < size)
 			{
-				array[--size] = c;
-
+				array[a] = c;
+				a++;
 			}
+		}
+		return (array);
 	}
-	return (array);
 }
