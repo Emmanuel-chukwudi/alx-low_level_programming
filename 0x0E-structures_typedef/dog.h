@@ -2,7 +2,10 @@
 #define DOG_H
 
 /**
- * main - creating a new struct dog
+ * struct dog - creating a new struct dog
+ * @name: name of the user
+ * @age: user age
+ * @owner: user
  *
  * Return: Always 0 (Success)
  */
