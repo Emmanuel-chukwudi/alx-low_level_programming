@@ -18,6 +18,11 @@ typedef struct args_t
 	void (*function)();
 } args_t;
 
+int _putchar(char c);
+void print_a_char(char *separator, va_list args);
+void print_a_integer(char *separator, va_list args);
+void print_a_float(char *separator, va_list args);
+void print_a_char_ptr(char *separator, va_list args);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
