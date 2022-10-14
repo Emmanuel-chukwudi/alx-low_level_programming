@@ -4,7 +4,6 @@
  * print_strings - prints strings
  * @separator: a string ...
  * @n: num of string
- * 
  * Return: 0
  */
 
